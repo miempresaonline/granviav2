@@ -1,3 +1,4 @@
+# Redirigir todas las solicitudes a index.html para SPA
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
