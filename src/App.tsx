@@ -23,6 +23,7 @@ function App() {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const formRef = useRef<HTMLDivElement>(null);
   const ia = useRef<HTMLDivElement>(null);
@@ -34,6 +35,45 @@ function App() {
   const offersRef = useRef<HTMLDivElement>(null);
   const brandsRef = useRef<HTMLDivElement>(null);
   const clinicsRef = useRef<HTMLDivElement>(null);
+
+  const testimonials = [
+    {
+      name: "Laura G.",
+      initials: "LG",
+      rating: 5,
+      text: "¡Mis audífonos son un cambio total! Ya no me pierdo ni una palabra en las reuniones. ¡Gracias por mejorar mi calidad de vida!"
+    },
+    {
+      name: "Carlos M.",
+      initials: "CM",
+      rating: 5,
+      text: "Nunca pensé que un audífono con IA pudiera hacer tanta diferencia. Es como si pudiera escuchar con claridad como antes."
+    },
+    {
+      name: "Sofía R.",
+      initials: "SR",
+      rating: 5,
+      text: "Excelente servicio y tecnología. Ahora disfruto de mis momentos en familia sin preocuparme por los ruidos."
+    },
+    {
+      name: "Miguel A.",
+      initials: "MA",
+      rating: 5,
+      text: "El mes de prueba gratis me convenció completamente. La diferencia es increíble y el precio es muy competitivo."
+    },
+    {
+      name: "Ana P.",
+      initials: "AP",
+      rating: 5,
+      text: "Después de años con problemas auditivos, estos audífonos me han devuelto la confianza. Son prácticamente invisibles."
+    },
+    {
+      name: "Roberto L.",
+      initials: "RL",
+      rating: 5,
+      text: "La tecnología de inteligencia artificial es impresionante. Se adaptan automáticamente a cada situación."
+    }
+  ];
 
   useEffect(() => {
     const observerOptions = {
@@ -57,6 +97,15 @@ function App() {
       observer.disconnect();
     };
   }, []);
+
+  // Carousel auto-rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -783,8 +832,8 @@ function App() {
         </div>
       </section>
 
-
-<section ref={clientes} className="py-20 bg-white">  
+      {/* Testimonials Carousel Section */}
+      <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
@@ -793,73 +842,56 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Testimonial 1 */}
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  LG
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900">Laura G.</h3>
-                  <div className="flex items-center mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+          {/* Carousel Container */}
+          <div className="relative max-w-4xl mx-auto mb-16">
+            <div className="overflow-hidden rounded-2xl">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <div className="bg-gray-50 rounded-2xl p-8 shadow-lg mx-auto max-w-2xl">
+                      <div className="flex items-center mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                          {testimonial.initials}
+                        </div>
+                        <div className="ml-4">
+                          <h3 className="text-xl font-semibold text-gray-900">{testimonial.name}</h3>
+                          <div className="flex items-center mt-1">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        {testimonial.text}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-              <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
-              <p className="text-gray-700 leading-relaxed">
-                ¡Mis audífonos son un cambio total! Ya no me pierdo ni una palabra en las reuniones. ¡Gracias por mejorar mi calidad de vida!
-              </p>
             </div>
 
-            {/* Testimonial 2 */}
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  CM
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900">Carlos M.</h3>
-                  <div className="flex items-center mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
-              <p className="text-gray-700 leading-relaxed">
-                Nunca pensé que un audífono con IA pudiera hacer tanta diferencia. Es como si pudiera escuchar con claridad como antes.
-              </p>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  SR
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-gray-900">Sofía R.</h3>
-                  <div className="flex items-center mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
-              <p className="text-gray-700 leading-relaxed">
-                Excelente servicio y tecnología. Ahora disfruto de mis momentos en familia sin preocuparme por los ruidos.
-              </p>
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentTestimonial 
+                      ? 'bg-[#9c0720] scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
             </div>
           </div>
 
           <div className="flex flex-col items-center">
-            
             <button 
               onClick={() => scrollToSection(formRef)}
               className="bg-[#9c0720] hover:bg-[#666666] text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
@@ -870,8 +902,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      
 
       {/* Clinics Section */}
       <section ref={clinicas} className="py-20 bg-white">
