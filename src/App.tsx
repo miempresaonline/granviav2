@@ -38,34 +38,34 @@ function App() {
 
   const testimonials = [
     {
-      name: "Laura G.",
-      initials: "LG",
+      name: "Rosana Miras Arratia",
+      initials: "RM",
       rating: 5,
-      text: "¡Mis audífonos son un cambio total! Ya no me pierdo ni una palabra en las reuniones. ¡Gracias por mejorar mi calidad de vida!"
+      text: "He tenido una experiencia excelente en esta clínica audiológica. El precio de los servicios es muy asequible, lo cual fue una grata sorpresa. Además, el audífono que me recomendaron es de gran calidad y ha mejorado significativamente mi calidad de vida. El personal es profesional y amable, ofreciendo un servicio personalizado y atento. Recomiendo esta clínica a cualquiera que busque soluciones auditivas de calidad a precios razonables."
     },
     {
-      name: "Carlos M.",
-      initials: "CM",
+      name: "mylia dominguez",
+      initials: "MD",
       rating: 5,
-      text: "Nunca pensé que un audífono con IA pudiera hacer tanta diferencia. Es como si pudiera escuchar con claridad como antes."
+      text: "Trato increíble por parte de los empleados, si lo necesito en un futuro sin duda volveré 😊😊!"
     },
     {
-      name: "Sofía R.",
-      initials: "SR",
+      name: "Ana Conde Moreda",
+      initials: "AC",
       rating: 5,
-      text: "Excelente servicio y tecnología. Ahora disfruto de mis momentos en familia sin preocuparme por los ruidos."
+      text: "Muy buena atención y variedad de presupuestos, lo recomiendo."
     },
     {
-      name: "Miguel A.",
-      initials: "MA",
+      name: "Maicoll Martínez sosa",
+      initials: "MM",
       rating: 5,
-      text: "El mes de prueba gratis me convenció completamente. La diferencia es increíble y el precio es muy competitivo."
+      text: "Acudimos al centro gracias a recomendaciones de conocidos y nos quedamos muy satisfechos con la atención recibida, sobre todo por el trato y la amabilidad. Nos atendió una chica joven muy carismática."
     },
     {
-      name: "Ana P.",
-      initials: "AP",
+      name: "Irati herran",
+      initials: "IR",
       rating: 5,
-      text: "Después de años con problemas auditivos, estos audífonos me han devuelto la confianza. Son prácticamente invisibles."
+      text: "Conocí el centro gracias a una amiga y fui con un familiar. El trato fue inmejorable y nos ayudaron en todo momento a entender las causas del problema. Nos atendieron rápido y fueron muy eficaces encontrando una solución."
     },
     {
       name: "Roberto L.",
@@ -608,7 +608,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative nomovil">
               <img 
                 src="https://vitalsord.com/wp-content/uploads/2025/06/AUDIFONOS-IA.png"
                 alt="Audífonos con Inteligencia Artificial"
