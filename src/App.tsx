@@ -836,7 +836,7 @@ function App() {
       <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo que dicen nuestros clientes en Google My Bussines</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Escucha las experiencias de quienes ya han mejorado su audición con nuestros audífonos de última tecnología.
             </p>
