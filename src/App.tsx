@@ -843,7 +843,7 @@ function App() {
           </div>
 
           {/* Carousel Container */}
-          <div className="relative max-w-4xl mx-auto mb-16">
+          <div className="relative max-w-4xl mx-auto mb-16 testimonial-carousel-container">
             <div className="overflow-hidden rounded-2xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -851,24 +851,28 @@ function App() {
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-gray-50 rounded-2xl p-8 shadow-lg mx-auto max-w-2xl">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                          {testimonial.initials}
-                        </div>
-                        <div className="ml-4">
-                          <h3 className="text-xl font-semibold text-gray-900">{testimonial.name}</h3>
-                          <div className="flex items-center mt-1">
-                            {[...Array(testimonial.rating)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                            ))}
+                    <div className="bg-gray-50 rounded-2xl p-8 shadow-lg mx-auto max-w-2xl testimonial-card">
+                      <div className="testimonial-content">
+                        <div className="flex items-center mb-6 testimonial-header">
+                          <div className="w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold testimonial-avatar">
+                            {testimonial.initials}
+                          </div>
+                          <div className="ml-4">
+                            <h3 className="text-xl font-semibold text-gray-900 testimonial-name">{testimonial.name}</h3>
+                            <div className="flex items-center mt-1">
+                              {[...Array(testimonial.rating)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                              ))}
+                            </div>
                           </div>
                         </div>
+                        <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
+                        <div className="testimonial-text">
+                          <p className="text-gray-700 leading-relaxed text-lg">
+                            {testimonial.text}
+                          </p>
+                        </div>
                       </div>
-                      <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
-                      <p className="text-gray-700 leading-relaxed text-lg">
-                        {testimonial.text}
-                      </p>
                     </div>
                   </div>
                 ))}
