@@ -851,24 +851,24 @@ function App() {
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-lg mx-auto max-w-2xl testimonial-card">
+                    <div className="testimonial-card bg-gray-50 rounded-2xl p-8 shadow-lg mx-auto max-w-2xl">
                       <div className="testimonial-content">
-                        <div className="testimonial-header flex items-center mb-4 sm:mb-6">
-                          <div className="testimonial-avatar w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-lg sm:text-2xl font-bold">
+                        <div className="testimonial-header flex items-center mb-6">
+                          <div className="testimonial-avatar w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                             {testimonial.initials}
                           </div>
-                          <div className="ml-3 sm:ml-4">
-                            <h3 className="testimonial-name text-lg sm:text-xl font-semibold text-gray-900">{testimonial.name}</h3>
+                          <div className="ml-4">
+                            <h3 className="testimonial-name text-xl font-semibold text-gray-900">{testimonial.name}</h3>
                             <div className="flex items-center mt-1">
                               {[...Array(testimonial.rating)].map((_, i) => (
-                                <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                               ))}
                             </div>
                           </div>
                         </div>
-                        <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-[#9c0720] opacity-20 mb-3 sm:mb-4" />
+                        <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
                         <div className="testimonial-text">
-                          <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                          <p className="text-gray-700 leading-relaxed text-lg">
                             {testimonial.text}
                           </p>
                         </div>

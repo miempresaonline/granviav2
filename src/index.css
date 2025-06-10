@@ -164,7 +164,7 @@
   animation-play-state: paused;
 }
 
-/* Testimonials carousel fixes for mobile */
+/* Testimonials carousel - dynamic height for mobile */
 .testimonial-card {
   display: flex;
   flex-direction: column;
@@ -183,7 +183,6 @@
   flex: 1;
   display: flex;
   align-items: flex-start;
-  margin-top: auto;
 }
 
 .testimonial-header {
@@ -195,6 +194,7 @@
   .testimonial-card {
     padding: 1.5rem;
     min-height: auto;
+    height: auto;
   }
   
   .testimonial-text {
@@ -216,16 +216,39 @@
   .testimonial-name {
     font-size: 1.125rem;
   }
+  
+  /* Remove fixed heights and let content flow naturally */
+  .testimonial-content {
+    height: auto;
+    min-height: auto;
+  }
+  
+  /* Ensure carousel container adapts to content */
+  .testimonial-card {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .testimonial-card {
     padding: 1.25rem;
+    height: auto;
   }
   
   .testimonial-text {
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+  
+  .testimonial-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .testimonial-name {
+    font-size: 1rem;
   }
 }
 
