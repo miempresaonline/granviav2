@@ -41,19 +41,19 @@ function App() {
       name: "Rosana Miras Arratia",
       initials: "RM",
       rating: 5,
-      text: "He tenido una experiencia excelente en esta clínica audiológica. El precio de los servicios es muy asequible, lo cual fue una grata sorpresa. Además, el audífono que me recomendaron es de gran calidad y ha mejorado significativamente mi calidad de vida. El personal es profesional y amable, ofreciendo un servicio personalizado y atento. Recomiendo esta clínica a cualquiera que busque soluciones auditivas de calidad a precios razonables."
+      text: "He tenido una experiencia excelente en esta clínica audiológica. El precio de los servicios es muy asequible, lo cual fue una grata sorpresa. Además, el audífono que me recomendaron es de gran calidad y ha mejorado significativamente mi calidad de vida."
     },
     {
       name: "mylia dominguez",
       initials: "MD",
       rating: 5,
-      text: "Trato increíble por parte de los empleados, si lo necesito en un futuro sin duda volveré 😊😊!"
+      text: "Los audifonos comprados estan dando buen resultado, he venido a hacer la revisión y el trato increíble por parte de los empleados, si lo necesito en un futuro sin duda volveré 😊😊!"
     },
     {
       name: "Ana Conde Moreda",
       initials: "AC",
       rating: 5,
-      text: "Muy buena atención y variedad de presupuestos, lo recomiendo."
+      text: "Muy buena atención y variedad de presupuestos, lo recomiendo. El personal es profesional y amable, ofreciendo un servicio personalizado y atento. Recomiendo esta clínica a cualquiera que busque soluciones auditivas de calidad a precios razonables"
     },
     {
       name: "Maicoll Martínez sosa",
@@ -71,7 +71,7 @@ function App() {
       name: "Roberto L.",
       initials: "RL",
       rating: 5,
-      text: "La tecnología de inteligencia artificial es impresionante. Se adaptan automáticamente a cada situación."
+      text: "La tecnología de inteligencia artificial es impresionante. Se adaptan automáticamente a cada situación. Hemos cambiado unos de unos cuantos años y la diferencia se nota, merece la pena. Recomendamos esta clínica"
     }
   ];
 
@@ -836,7 +836,7 @@ function App() {
       <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo que dicen nuestros clientes en Google My Bussines</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Escucha las experiencias de quienes ya han mejorado su audición con nuestros audífonos de última tecnología.
             </p>
