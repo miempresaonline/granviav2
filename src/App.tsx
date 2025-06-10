@@ -832,7 +832,7 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials Carousel Section - Completely restructured for mobile */}
+      {/* Testimonials Carousel Section - Ultra compact for mobile */}
       <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -842,31 +842,31 @@ function App() {
             </p>
           </div>
 
-          {/* Mobile-optimized Carousel Container */}
-          <div className="testimonials-carousel-wrapper">
-            <div className="testimonials-carousel-container">
+          {/* Ultra-compact Carousel Container */}
+          <div className="testimonials-ultra-compact">
+            <div className="testimonials-track-ultra">
               <div 
-                className="testimonials-carousel-track"
+                className="testimonials-slider-ultra"
                 style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="testimonial-slide">
-                    <div className="testimonial-card-mobile">
-                      <div className="testimonial-header-mobile">
-                        <div className="testimonial-avatar-mobile">
+                  <div key={index} className="testimonial-item-ultra">
+                    <div className="testimonial-content-ultra">
+                      <div className="testimonial-header-ultra">
+                        <div className="testimonial-avatar-ultra">
                           {testimonial.initials}
                         </div>
-                        <div className="testimonial-info-mobile">
-                          <h3 className="testimonial-name-mobile">{testimonial.name}</h3>
-                          <div className="testimonial-rating-mobile">
+                        <div className="testimonial-info-ultra">
+                          <h3 className="testimonial-name-ultra">{testimonial.name}</h3>
+                          <div className="testimonial-rating-ultra">
                             {[...Array(testimonial.rating)].map((_, i) => (
-                              <Star key={i} className="star-icon" />
+                              <Star key={i} className="star-ultra" />
                             ))}
                           </div>
                         </div>
                       </div>
-                      <Quote className="quote-icon" />
-                      <p className="testimonial-text-mobile">
+                      <Quote className="quote-ultra" />
+                      <p className="testimonial-text-ultra">
                         {testimonial.text}
                       </p>
                     </div>
@@ -875,21 +875,21 @@ function App() {
               </div>
             </div>
 
-            {/* Carousel Indicators - positioned right after testimonials */}
-            <div className="testimonial-indicators">
+            {/* Ultra-compact Indicators */}
+            <div className="testimonial-indicators-ultra">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`indicator-dot ${
-                    index === currentTestimonial ? 'active' : ''
+                  className={`indicator-ultra ${
+                    index === currentTestimonial ? 'active-ultra' : ''
                   }`}
                 />
               ))}
             </div>
           </div>
 
-          <div className="testimonial-cta">
+          <div className="testimonial-cta-ultra">
             <button 
               onClick={() => scrollToSection(formRef)}
               className="bg-[#9c0720] hover:bg-[#666666] text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
