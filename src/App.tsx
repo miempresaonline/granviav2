@@ -836,14 +836,14 @@ function App() {
       <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo que dicen nuestros clientes en Google My Bussines</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Escucha las experiencias de quienes ya han mejorado su audición con nuestros audífonos de última tecnología.
             </p>
           </div>
 
           {/* Carousel Container */}
-          <div className="relative max-w-4xl mx-auto mb-16">
+          <div className="relative max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-2xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -880,7 +880,7 @@ function App() {
             </div>
 
             {/* Carousel Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -895,7 +895,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mt-12">
             <button 
               onClick={() => scrollToSection(formRef)}
               className="bg-[#9c0720] hover:bg-[#666666] text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
