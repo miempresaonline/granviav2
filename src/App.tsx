@@ -102,7 +102,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
