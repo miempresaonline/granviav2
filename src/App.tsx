@@ -832,7 +832,7 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials Carousel Section */}
+      {/* Testimonials Carousel Section - Completely restructured for mobile */}
       <section ref={clientes} className="py-20 bg-white">  
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -842,60 +842,54 @@ function App() {
             </p>
           </div>
 
-          {/* Carousel Container */}
-          <div className="relative max-w-4xl mx-auto">
-            <div className="overflow-hidden rounded-2xl">
+          {/* Mobile-optimized Carousel Container */}
+          <div className="testimonials-carousel-wrapper">
+            <div className="testimonials-carousel-container">
               <div 
-                className="flex transition-transform duration-500 ease-in-out"
+                className="testimonials-carousel-track"
                 style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="testimonial-card bg-gray-50 rounded-2xl p-8 shadow-lg mx-auto max-w-2xl">
-                      <div className="testimonial-content">
-                        <div className="testimonial-header flex items-center mb-6">
-                          <div className="testimonial-avatar w-16 h-16 bg-gradient-to-br from-[#9c0720] to-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                            {testimonial.initials}
-                          </div>
-                          <div className="ml-4">
-                            <h3 className="testimonial-name text-xl font-semibold text-gray-900">{testimonial.name}</h3>
-                            <div className="flex items-center mt-1">
-                              {[...Array(testimonial.rating)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                              ))}
-                            </div>
-                          </div>
+                  <div key={index} className="testimonial-slide">
+                    <div className="testimonial-card-mobile">
+                      <div className="testimonial-header-mobile">
+                        <div className="testimonial-avatar-mobile">
+                          {testimonial.initials}
                         </div>
-                        <Quote className="w-10 h-10 text-[#9c0720] opacity-20 mb-4" />
-                        <div className="testimonial-text">
-                          <p className="text-gray-700 leading-relaxed text-lg">
-                            {testimonial.text}
-                          </p>
+                        <div className="testimonial-info-mobile">
+                          <h3 className="testimonial-name-mobile">{testimonial.name}</h3>
+                          <div className="testimonial-rating-mobile">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <Star key={i} className="star-icon" />
+                            ))}
+                          </div>
                         </div>
                       </div>
+                      <Quote className="quote-icon" />
+                      <p className="testimonial-text-mobile">
+                        {testimonial.text}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Carousel Indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
+            {/* Carousel Indicators - positioned right after testimonials */}
+            <div className="testimonial-indicators">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial 
-                      ? 'bg-[#9c0720] scale-125' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                  className={`indicator-dot ${
+                    index === currentTestimonial ? 'active' : ''
                   }`}
                 />
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col items-center mt-12">
+          <div className="testimonial-cta">
             <button 
               onClick={() => scrollToSection(formRef)}
               className="bg-[#9c0720] hover:bg-[#666666] text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
