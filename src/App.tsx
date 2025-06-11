@@ -403,11 +403,11 @@ function App() {
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
                 <div className="space-y-6">
                   <div className="text-4xl font-bold tracking-tight">
-                    Por tiempo limitado
+                    Ahora, este mes
                   </div>
                   <div className="bg-[#9c0720] px-8 py-4 rounded-lg shadow-lg">
-                    <span className="block text-2xl font-bold">¡1 MES DE PRUEBA GRATIS!</span>
-                    <span className="text-lg opacity-90">Sin compromiso</span>
+                    <span className="block text-2xl font-bold">-60 % descuento</span>
+                    
                   </div>
                   <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-lg shadow-lg">
                     <span className="block text-2xl font-bold text-gray-400 ">¿Tienes un presupuesto?</span>
