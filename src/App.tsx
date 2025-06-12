@@ -405,7 +405,7 @@ function App() {
                   <div className="text-4xl font-bold tracking-tight">
                     Unidades limitadas
                   </div>
-                  <div className="bg-[#9c0720] px-8 py-4 rounded-lg shadow-lg">
+                  <div className="bg-[#9c0720] px-8 py-4 rounded-lg shadow-lg zoom-pulse-effect">
                     <span className="block text-2xl font-bold">-60 % descuento</span>
                     <span className="block text-2xl font-bold ">¡1 Mes de prueba gratis!</span>
                   </div>
