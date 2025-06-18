@@ -411,7 +411,7 @@ function App() {
                   </div>
                   <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-lg shadow-lg">
                     <span className="block text-2xl font-bold text-gray-400 ">¿Tienes un presupuesto?</span>
-                    <span className="block text-2xl font-bold ">Te lo mejoramos</span>
+                    <span className="block text-2xl font-bold ">Te lo mejoramos por audífonos de última generación con inteligencia artificial</span>
                   </div>
                 </div>
               </div>
