@@ -464,7 +464,7 @@ function App() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Audífonos recargable sin pilas</h2>
               <p className="text-gray-400 mb-8">
-                incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 995€ en lugar de 2.499€ (60% de descuento).
+                Incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 995€ en lugar de 2.499€ (60% de descuento).
               </p>
               <button 
                 onClick={() => scrollToSection(formRef)}
@@ -554,7 +554,7 @@ function App() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="max-w-3xl px-6 animate-on-scroll">
             <h1 className="text-6xl font-bold mb-6">-60% DESCUENTO</h1>
-            <p className="text-xl mb-8">¡1 més de prueba gratis!</p>
+            <p className="text-xl mb-8">¡1 mes de prueba gratis!</p>
             <button 
               onClick={() => scrollToSection(formRef)}
               className="cta-button bg-white text-black px-8 py-3 rounded-full font-semibold"
