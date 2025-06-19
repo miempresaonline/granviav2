@@ -610,7 +610,7 @@ function App() {
             </div>
             <div className="relative nomovil">
               <img 
-                src="https://vitalsord.com/wp-content/uploads/2025/06/AUDIFONOS-IA.png"
+                src="https://vitalsord.com/wp-content/uploads/2025/06/Banner_optimizadoAudifonosIA.jpg"
                 alt="Audífonos con Inteligencia Artificial"
                 className="rounded-2xl shadow-2xl"
               />
