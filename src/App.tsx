@@ -619,7 +619,7 @@ function App() {
                 <div className="flex items-center space-x-4">
                   <div className="flex-1 nomovil">
                     <h4 className="text-lg font-semibold mb-1">Prueba Gratuita</h4>
-                    <p className="text-sm text-gray-300">Experimenta la diferencia durante 30 días sin compromiso</p>
+                    <p className="text-sm text-white-500">Experimenta la diferencia durante 30 días sin compromiso</p>
                   </div>
                   <button 
                     onClick={() => scrollToSection(formRef)}
