@@ -410,8 +410,8 @@ function App() {
                     <span className="block text-2xl font-bold ">¡1 Mes de prueba gratis!</span>
                   </div>
                   <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-lg shadow-lg">
-                    <span className="block text-2xl font-bold text-gray-400 ">¿Tienes un presupuesto?</span>
-                    <span className="block text-2xl font-bold ">Te lo mejoramos por audífonos de última generación con inteligencia artificial</span>
+                    <span className="block text-2xl font-bold text-gray-400 ">Audífonos de última generación</span>
+                    <span className="block text-2xl font-bold ">Con inteligencia artificial</span>
                   </div>
                 </div>
               </div>
