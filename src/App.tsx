@@ -406,7 +406,7 @@ function App() {
                     Unidades limitadas
                   </div>
                   <div className="bg-[#9c0720] px-8 py-4 rounded-lg shadow-lg zoom-pulse-effect">
-                    <span className="block text-2xl font-bold">-60 % descuento</span>
+                    <span className="block text-2xl font-bold">-50 % descuento</span>
                     <span className="block text-2xl font-bold ">¡1 Mes de prueba gratis!</span>
                   </div>
                   <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-lg shadow-lg">
@@ -444,7 +444,7 @@ function App() {
                 <div className="bg-[#8B1538] text-white py-3 px-6 flex-1 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-sm uppercase">PRECIO OFERTA</div>
-                    <div className="text-3xl font-bold">995€</div>
+                    <div className="text-3xl font-bold">1190€</div>
                   </div>
                 </div>
                 <div className="bg-black text-white py-3 px-6 flex-1 flex items-center justify-center">
