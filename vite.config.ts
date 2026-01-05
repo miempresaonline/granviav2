@@ -6,19 +6,29 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  // Configuración para despliegue en Plesk
-  base: './', // Asegura que las rutas sean relativas
+  // Configuración optimizada para despliegue en Plesk
+  base: './',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: false,
-    // Optimizaciones para producción
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          lucide: ['lucide-react']
+        }
+      }
+    },
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log']
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000
   }
 });
