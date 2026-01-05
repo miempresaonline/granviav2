@@ -456,7 +456,7 @@ function App() {
                 <div className="bg-[#C88B9F] text-white py-3 px-6 flex-1 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-sm uppercase">DESCUENTO</div>
-                    <div className="text-3xl font-bold">60%</div>
+                    <div className="text-3xl font-bold">50%</div>
                   </div>
                 </div>
               </div>
@@ -464,7 +464,7 @@ function App() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Audífonos recargable sin pilas</h2>
               <p className="text-gray-400 mb-8">
-                Incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 995€ en lugar de 2.499€ (60% de descuento).
+                Incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 995€ en lugar de 2.499€ (50% de descuento).
               </p>
               <button 
                 onClick={() => scrollToSection(formRef)}
@@ -553,7 +553,7 @@ function App() {
         <section ref={subvenciones} className="py-20 bg-gradient-to-b from-blue-900 to-black">
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="max-w-3xl px-6 animate-on-scroll">
-            <h1 className="text-6xl font-bold mb-6">-60% DESCUENTO</h1>
+            <h1 className="text-6xl font-bold mb-6">-50% DESCUENTO</h1>
             <p className="text-xl mb-8">¡1 mes de prueba gratis!</p>
             <button 
               onClick={() => scrollToSection(formRef)}
