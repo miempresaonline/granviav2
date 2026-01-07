@@ -464,7 +464,7 @@ function App() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Audífonos recargable sin pilas</h2>
               <p className="text-gray-400 mb-8">
-                Incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 995€ en lugar de 2.499€ (50% de descuento).
+                Incluido el cargador, rehabilitación auditiva valorada en 500€, seguro a todo riesgo incluido, revisiones gratuitas de por vida, por sólo 1245€ en lugar de 2.499€ (50% de descuento).
               </p>
               <button 
                 onClick={() => scrollToSection(formRef)}
