@@ -444,7 +444,7 @@ function App() {
                 <div className="bg-[#8B1538] text-white py-3 px-6 flex-1 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-sm uppercase">PRECIO OFERTA</div>
-                    <div className="text-3xl font-bold">1190€</div>
+                    <div className="text-3xl font-bold">1245€</div>
                   </div>
                 </div>
                 <div className="bg-black text-white py-3 px-6 flex-1 flex items-center justify-center">
