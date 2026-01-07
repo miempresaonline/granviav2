@@ -422,7 +422,7 @@ function App() {
                 Te ayudamos a encontrar el{' '}
                 <span className="text-red-800">mejor precio</span> para tus audífonos
               </h2>
-              <p className="text-gray-300 mb-6">INFÓMATE DE LAS SUBVENCIONES DISPONIBLES</p>
+              <p className="text-gray-300 mb-6">INFÓRMATE DE LAS SUBVENCIONES DISPONIBLES</p>
               <section ref={formRef} className="">
                 {isSubmitted ? renderMainThankYouMessage() : renderForm()}
               </section>
