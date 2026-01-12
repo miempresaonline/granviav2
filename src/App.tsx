@@ -970,7 +970,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-white text-black text-center">
+      <section className="py-5 bg-white text-black text-center">
         <p className="text-xl mt-12 mb-8 text-gray-700 text-center">
             <a href="http://guiadelaudifono.com" target="_blank">guiadelaudifono.com</a> | <a href="mailto:gea@gea-audifonos.com">gea@gea-audifonos.com</a> | <a href="tel:900840079">900840079</a>
           </p>
