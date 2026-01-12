@@ -494,11 +494,18 @@ function App() {
         <nav className="fixed top-0 w-full p-6 bg-white shadow-md z-40">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
             <div className="flex-1 sm:flex-none flex justify-center sm:justify-start">
-              <img 
-                src="https://www.audifonosgranviabilbao.com/uploads/logos/audifonosgranviabilbao.png"
-                alt="Gran Vía Clínicas Audiológicas"
-                className="h-6 sm:h-12"
-              />
+              <a 
+                href="https://www.audifonosgranviabilbao.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <img 
+                  src="https://www.audifonosgranviabilbao.com/uploads/logos/audifonosgranviabilbao.png"
+                  alt="Gran Vía Clínicas Audiológicas"
+                  className="h-6 sm:h-12"
+                />
+              </a>
             </div>
             <div className="hidden sm:flex flex-1 justify-center items-center space-x-12">
               <button 
