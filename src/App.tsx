@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronRight, Phone, X, MapPin, PhoneCall, Brain, Wifi, Settings2, Volume2, Star, StarHalf, Quote } from 'lucide-react';
+import { ChevronRight, Phone, X, MapPin, PhoneCall, Brain, Wifi, Settings2, Volume2, Star, StarHalf, Quote, Mail, Globe } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -973,7 +973,6 @@ function App() {
       <section className="py-20 bg-white text-black text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-6">SOLICITA INFORMACIÓN</h2>
-          aaaaaaaaaaaaaaa
           <p className="text-xl mb-8">Sin compromiso</p>
           <button 
             onClick={() => scrollToSection(formRef)}
