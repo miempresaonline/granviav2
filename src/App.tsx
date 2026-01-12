@@ -972,7 +972,7 @@ function App() {
 
       <section className="py-20 bg-white text-black text-center">
         <p className="text-xl mt-12 mb-8 text-gray-700 text-center">
-            <a href="http://guiadelaudifono.com" target="_blank">guiadelaudifono.com</a> | <a href="mailto:gea@gea-audifonos.com">gea@gea-audifonos.com</a> | <a href="tel:900840079">900840079</a>
+            <a href="https://www.audifonosgranviabilbao.com/" target="_blank">audifonosgranviabilbao.com</a> | <a href="mailto:gea@gea-audifonos.com">gea@gea-audifonos.com</a> 
           </p>
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-6">SOLICITA INFORMACIÓN</h2>
