@@ -969,10 +969,11 @@ function App() {
           </div>
         </div>
       </section>
-<p className="text-xl mt-12 mb-8 text-gray-700 text-center">
+
+      <section className="py-20 bg-white text-black text-center">
+        <p className="text-xl mt-12 mb-8 text-gray-700 text-center">
             <a href="http://guiadelaudifono.com" target="_blank">guiadelaudifono.com</a> | <a href="mailto:gea@gea-audifonos.com">gea@gea-audifonos.com</a> | <a href="tel:900840079">900840079</a>
           </p>
-      <section className="py-20 bg-white text-black text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-6">SOLICITA INFORMACIÓN</h2>
           <p className="text-xl mb-8">Sin compromiso</p>
