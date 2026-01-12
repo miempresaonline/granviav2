@@ -909,7 +909,7 @@ function App() {
       </section>
 
       {/* Clinics Section */}
-      <section ref={clinicas} className="py-20 bg-white">
+      <section ref={clinicas} className="py-5 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Nuestras Clínicas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
