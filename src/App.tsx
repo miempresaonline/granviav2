@@ -144,17 +144,31 @@ function App() {
 
   const submitToWebhook = async (data: typeof formData, recaptchaToken: string) => {
     try {
+      const payload = {
+        ...data,
+        recaptchaToken,
+        source: 'website_form_GRAN_VIA',
+        timestamp: new Date().toISOString()
+      };
+
+      // 1. Save to local backup (fire and forget, don't wait for success to send to n8n)
+      try {
+        await fetch('/save_lead.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (backupError) {
+        console.error('Backup save failed:', backupError);
+      }
+
+      // 2. Send to N8N webhook
       const response = await fetch('https://n8n.miempresa.online/webhook/landing-webhook-guiadelaudifono', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...data,
-          recaptchaToken,
-          source: 'website_form_GRAN_VIA',
-          timestamp: new Date().toISOString()
-        })
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
